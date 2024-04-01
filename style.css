@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: #ccc;
+    height: 80px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    ;
+
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    padding: 30px 64px;
+}
+
+nav ul li a:hover {
+    background-color: black;
+    color: azure;
+}
+
+nav .parent {
+    position: relative;
+}
+
+nav .dropdown {
+    position: absolute;
+    margin-top: 100px;
+    background-color: antiquewhite;
+    width: 250px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+nav .parent:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 20px;
+}
+nav .dropdown li{
+    width: 100%;
+}
+
+nav .dropdown li a{
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+
+
+}
+nav ul li a{
+    position: relative;
+}
+nav  ul li a::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    background-color:red;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::before{
+   width: 100%;
+}
+nav .child{
+    position: relative;
+}
+nav .child .sub_dropdown{
+    position:absolute;
+    left: 100%;
+    top: 0;
+    width: 250px;
+    background-color: bisque;
+    visibility: hidden;
+    opacity: 0;
+    transition:0.5s;
+}
+nav .dropdown .child:hover .sub_dropdown{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+body{
+    background: url("pic1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
